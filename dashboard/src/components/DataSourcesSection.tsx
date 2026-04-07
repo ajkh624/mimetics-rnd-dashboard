@@ -47,6 +47,18 @@ export default function DataSourcesSection({ data, lang }: { data: Report[]; lan
             </tbody>
           </table>
         </div>
+        <div className="mt-4 text-sm">
+          <a
+            href="https://drive.google.com/drive/u/2/folders/1mQpygZQQZyet2IElyXpFqPrgpt9IMF5V"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 font-medium hover:underline"
+          >
+            <span>📂</span>
+            {lang === "ko" ? "임상결과 드라이브 폴더" : lang === "ja" ? "臨床結果ドライブフォルダ" : "Clinical Results Drive Folder"}
+            <span className="text-xs text-gray-400">↗</span>
+          </a>
+        </div>
       </details>
     </div>
   );

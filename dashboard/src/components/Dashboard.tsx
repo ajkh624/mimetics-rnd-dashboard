@@ -8,6 +8,8 @@ import EfficacySection from "./EfficacySection";
 import AbsorptionSection from "./AbsorptionSection";
 import SafetySection from "./SafetySection";
 import DataSourcesSection from "./DataSourcesSection";
+import Sidebar from "./Sidebar";
+import InsightBox from "./InsightBox";
 
 const LANG_OPTIONS: { label: string; value: Lang }[] = [
   { label: "한국어", value: "ko" },
@@ -31,7 +33,7 @@ export default function Dashboard({ data }: { data: Report[] }) {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
+    <div className="max-w-[1400px] mx-auto px-4 py-6">
       {/* Language selector */}
       <div className="flex justify-end mb-2">
         <select
@@ -45,8 +47,9 @@ export default function Dashboard({ data }: { data: Report[] }) {
         </select>
       </div>
 
-      {/* Hero + KPIs */}
+      {/* Hero + KPIs (full width) */}
       <HeroSection data={data} lang={lang} />
+      <InsightBox text={t("insight_kpi", lang)} />
 
       {/* Sticky Navigation bar */}
       <div className="sticky top-0 z-50 bg-[#f5f6f8]/95 backdrop-blur-sm py-3 -mx-4 px-4 mb-6 border-b border-gray-200">
@@ -64,14 +67,30 @@ export default function Dashboard({ data }: { data: Report[] }) {
         </div>
       </div>
 
-      {/* Sections */}
-      <EfficacySection data={data} lang={lang} />
-      <div className="my-8" />
-      <AbsorptionSection data={data} lang={lang} />
-      <div className="my-8" />
-      <SafetySection data={data} lang={lang} />
-      <div className="my-8" />
-      <DataSourcesSection data={data} lang={lang} />
+      {/* Sidebar + Main content */}
+      <div className="flex gap-6">
+        <Sidebar lang={lang} />
+
+        <main className="flex-1 min-w-0">
+          <EfficacySection data={data} lang={lang} />
+          <InsightBox text={t("insight_efficacy", lang)} />
+
+          <div className="mt-2">
+            <InsightBox text={t("insight_heatmap", lang)} />
+          </div>
+
+          <div className="my-8" />
+          <AbsorptionSection data={data} lang={lang} />
+          <InsightBox text={t("insight_absorption", lang)} />
+
+          <div className="my-8" />
+          <SafetySection data={data} lang={lang} />
+          <InsightBox text={t("insight_safety", lang)} />
+
+          <div className="my-8" />
+          <DataSourcesSection data={data} lang={lang} />
+        </main>
+      </div>
 
       {/* Footer */}
       <div className="mt-12 py-6 border-t border-gray-200 text-center text-xs text-gray-400">

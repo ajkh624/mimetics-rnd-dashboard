@@ -2,9 +2,9 @@ import { Lang } from "./types";
 
 const T: Record<string, Record<Lang, string>> = {
   hero_title: {
-    ko: "음압패치 효과 검증 대시보드",
-    en: "Cupping Patch Efficacy Dashboard",
-    ja: "陰圧パッチ効果検証ダッシュボード",
+    ko: "휴먼피부임상센터 음압패치 임상결과",
+    en: "Human Skin Clinical Center — Cupping Patch Clinical Results",
+    ja: "ヒューマン皮膚臨床センター 陰圧パッチ臨床結果",
   },
   hero_subtitle: {
     ko: "14개 임상시험 PDF 데이터 기반 — 패치 부가효과 지표별/제품별 비교",
@@ -88,6 +88,105 @@ const T: Record<string, Record<Lang, string>> = {
   tab_sources: { ko: "데이터 출처", en: "Data Sources", ja: "データ出典" },
   nav_heatmap: { ko: "히트맵", en: "Heatmap", ja: "ヒートマップ" },
   pilot_label: { ko: "[예비]", en: "[Pilot]", ja: "[予備]" },
+
+  // ── 섹션별 인사이트 ──
+  insight_kpi: {
+    ko: "음압패치를 함께 사용하면 제품 단독 사용 대비 모든 지표에서 유의미한 추가 개선 효과가 확인되었습니다. 특히 탄력(+211%), 주름(+171%), 보습(+159%)에서 가장 높은 부가효과를 보였으며, 대부분의 지표에서 군간 차이가 통계적으로 유의(p<0.05)합니다.",
+    en: "Using the cupping patch alongside products showed significant add-on improvements across all metrics. Elasticity (+211%), wrinkles (+171%), and moisturizing (+159%) showed the highest add-on effects, with most metrics showing statistically significant between-group differences (p<0.05).",
+    ja: "陰圧パッチを併用することで、全指標で有意な追加改善効果が確認されました。特に弾力(+211%)、シワ(+171%)、保湿(+159%)で最も高い付加効果を示し、ほとんどの指標で群間差が統計的に有意(p<0.05)です。",
+  },
+  insight_efficacy: {
+    ko: "시험군(제품+패치)은 대조군(제품 단독)보다 일관되게 높은 개선율을 보입니다. 지표별 버튼을 클릭하면 각 제품의 시험군/대조군 개선율과 대조군 대비 개선율(빨간 배지)을 확인할 수 있습니다.",
+    en: "The test group (product + patch) consistently shows higher improvement than the control group (product only). Click metric buttons to see per-product test/control rates and comparative improvement (red badge).",
+    ja: "試験群（製品+パッチ）は対照群（製品のみ）より一貫して高い改善率を示しています。指標ボタンをクリックすると、製品別の試験群/対照群改善率と対照群比改善率（赤バッジ）を確認できます。",
+  },
+  insight_heatmap: {
+    ko: "색이 진할수록 패치 부가효과가 큰 조합입니다. 옥타겔(HM-R25-1063)이 가장 다양한 지표에서 높은 효과를 보였고, 색소(최대 216%)와 탄력(최대 211%) 지표에서 전반적으로 높은 부가효과가 관찰됩니다.",
+    en: "Darker cells indicate stronger patch add-on effects. OctaGel (HM-R25-1063) showed high effects across the most metrics. Pigmentation (up to 216%) and elasticity (up to 211%) showed the highest overall add-on effects.",
+    ja: "色が濃いほどパッチ付加効果が大きい組み合わせです。オクタゲル(HM-R25-1063)が最も多くの指標で高い効果を示し、色素沈着(最大216%)と弾力(最大211%)で全体的に高い付加効果が観察されます。",
+  },
+  insight_absorption: {
+    ko: "음압패치의 가장 근본적인 효과인 피부 흡수 증진을 보여줍니다. 패치 사용 시 흡수 깊이가 최대 +383%, 흡수량이 최대 +322% 증가하여, 유효 성분이 피부 깊숙이 전달됨을 확인할 수 있습니다.",
+    en: "Shows the most fundamental effect of the cupping patch — enhanced skin absorption. With the patch, absorption depth increased up to +383% and absorption amount up to +322%, confirming deeper delivery of active ingredients.",
+    ja: "陰圧パッチの最も基本的な効果である皮膚吸収促進を示しています。パッチ使用時、吸収深さが最大+383%、吸収量が最大+322%増加し、有効成分が肌深部に届くことが確認されました。",
+  },
+  insight_safety: {
+    ko: "전 제품·전 기간에 걸쳐 이상반응 0건, 자극지수 0.07~0.18(모두 비자극성 판정)으로 음압패치의 안전성이 임상적으로 확인되었습니다. 순응도 99.3~100%, 만족도 85~100%로 사용감도 우수합니다.",
+    en: "Zero adverse reactions across all products and periods, irritation indices 0.07–0.18 (all non-irritant) clinically confirm the patch's safety. Compliance 99.3–100% and satisfaction 85–100% indicate excellent usability.",
+    ja: "全製品・全期間で有害反応0件、刺激指数0.07〜0.18（全て非刺激性）で安全性が臨床的に確認されました。順守度99.3〜100%、満足度85〜100%で使用感も優れています。",
+  },
+
+  // ── 사이드바 가이드 ──
+  guide_title: {
+    ko: "대시보드 사용 가이드",
+    en: "Dashboard Guide",
+    ja: "ダッシュボード使用ガイド",
+  },
+  guide_overview: {
+    ko: "이 대시보드는 14개 임상시험 보고서(휴먼테스트 수행)에서 추출한 데이터를 시각화합니다. 음압패치를 함께 사용했을 때의 부가효과를 지표별·제품별로 비교할 수 있습니다.",
+    en: "This dashboard visualizes data extracted from 14 clinical trial reports. Compare the add-on effects of the cupping patch by metric and product.",
+    ja: "このダッシュボードは14件の臨床試験報告書から抽出したデータを視覚化します。指標別・製品別にパッチの付加効果を比較できます。",
+  },
+  guide_how_title: {
+    ko: "사용 방법",
+    en: "How to Use",
+    ja: "使い方",
+  },
+  guide_step1: {
+    ko: "상단 KPI 카드에서 핵심 지표의 패치 부가효과를 한눈에 확인하세요.",
+    en: "Check the key patch add-on metrics at a glance from the top KPI cards.",
+    ja: "上部のKPIカードでパッチ付加効果の主要指標を一目で確認してください。",
+  },
+  guide_step2: {
+    ko: "지표 버튼(보습, 탄력, 주름 등)을 클릭하면 제품별 시험군/대조군 비교 차트가 표시됩니다.",
+    en: "Click metric buttons (Moisturizing, Elasticity, etc.) to see per-product test vs control comparison.",
+    ja: "指標ボタンをクリックすると、製品別の試験群/対照群比較チャートが表示されます。",
+  },
+  guide_step3: {
+    ko: "히트맵에서 색상이 진한 셀일수록 패치 효과가 큰 제품×지표 조합입니다.",
+    en: "In the heatmap, darker cells indicate stronger patch effect for that product×metric combination.",
+    ja: "ヒートマップで色が濃いセルほどパッチ効果が大きい製品×指標の組み合わせです。",
+  },
+  guide_step4: {
+    ko: "흡수도 탭에서 흡수 깊이/속도/량별로 패치 유무 비교를 확인하세요.",
+    en: "Check absorption depth/speed/amount comparison with and without patch in the Absorption tab.",
+    ja: "吸収度タブで吸収深さ/速度/量別にパッチ有無の比較を確認してください。",
+  },
+  guide_step5: {
+    ko: "안전성 섹션에서 전 제품의 이상반응·자극지수·순응도·만족도를 확인할 수 있습니다.",
+    en: "The Safety section shows adverse reactions, irritation index, compliance, and satisfaction for all products.",
+    ja: "安全性セクションで全製品の有害反応・刺激指数・順守度・満足度を確認できます。",
+  },
+  guide_step6: {
+    ko: "우측 상단 드롭다운에서 한국어/English/日本語로 언어를 변경할 수 있습니다.",
+    en: "Switch language via the dropdown at the top right: 한국어 / English / 日本語.",
+    ja: "右上のドロップダウンから韓国語/English/日本語に言語を切り替えられます。",
+  },
+  guide_terms_title: {
+    ko: "주요 용어",
+    en: "Key Terms",
+    ja: "主要用語",
+  },
+  guide_term_test: {
+    ko: "시험군: 제품 + 음압패치 함께 사용",
+    en: "Test group: Product + cupping patch",
+    ja: "試験群: 製品 + 陰圧パッチ併用",
+  },
+  guide_term_control: {
+    ko: "대조군: 제품만 단독 사용",
+    en: "Control group: Product only",
+    ja: "対照群: 製品のみ使用",
+  },
+  guide_term_comp: {
+    ko: "대조군 대비(%): 패치 부가효과의 크기. 값이 클수록 패치 효과가 큼",
+    en: "Comparative (%): Size of the patch add-on effect. Higher = stronger patch effect",
+    ja: "対照群比(%): パッチ付加効果の大きさ。値が大きいほどパッチ効果が大きい",
+  },
+  guide_term_pvalue: {
+    ko: "p<0.05: 시험군과 대조군의 차이가 통계적으로 유의함",
+    en: "p<0.05: Statistically significant difference between test and control groups",
+    ja: "p<0.05: 試験群と対照群の差が統計的に有意",
+  },
 };
 
 export function t(key: string, lang: Lang, vars?: Record<string, string | number>): string {

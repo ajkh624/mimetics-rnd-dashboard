@@ -195,7 +195,9 @@
           {
             "mean": 0.1126,
             "sd": 0.0197
-          },
+          }
+        ],
+        "control_values": [
           {
             "mean": 0.1003,
             "sd": 0.0181
@@ -205,7 +207,23 @@
             "sd": 0.0171
           }
         ],
-        "control_values": [
+        "test_improvement": [
+          11.65
+        ],
+        "control_improvement": [
+          6.76
+        ],
+        "comparative_improvement": [
+          72.27
+        ],
+        "between_group_p": [
+          "0.030"
+        ]
+      },
+      {
+        "metric": "주름(팔자)",
+        "table_title": "주름 평균 깊이 평가 결과",
+        "test_values": [
           {
             "mean": 0.1212,
             "sd": 0.0367
@@ -213,7 +231,9 @@
           {
             "mean": 0.1108,
             "sd": 0.0292
-          },
+          }
+        ],
+        "control_values": [
           {
             "mean": 0.1033,
             "sd": 0.0316
@@ -224,24 +244,16 @@
           }
         ],
         "test_improvement": [
-          11.65,
-          6.76
+          14.78
         ],
         "control_improvement": [
-          14.78,
           9.72
         ],
         "comparative_improvement": [
-          72.27,
           52.1
         ],
         "between_group_p": [
-          "0.030"
-        ],
-        "within_group_p": [
-          "<0.001",
-          "<0.001",
-          "<0.001"
+          "0.022"
         ]
       },
       {
@@ -1499,10 +1511,10 @@
         ],
         "test_improvement": [
           322.54,
-          113.83
+          422.54
         ],
         "control_improvement": [
-          422.54,
+          113.83,
           213.83
         ],
         "comparative_improvement": [
@@ -1539,10 +1551,10 @@
         ],
         "test_improvement": [
           163.55,
-          36.78
+          263.55
         ],
         "control_improvement": [
-          263.55,
+          36.78,
           136.78
         ],
         "comparative_improvement": [
@@ -1579,10 +1591,10 @@
         ],
         "test_improvement": [
           163.58,
-          36.76
+          263.58
         ],
         "control_improvement": [
-          263.58,
+          36.76,
           136.76
         ],
         "comparative_improvement": [
@@ -1630,10 +1642,10 @@
         ],
         "test_improvement": [
           192.62,
-          85.78
+          292.62
         ],
         "control_improvement": [
-          292.62,
+          85.78,
           185.78
         ],
         "comparative_improvement": [
@@ -1670,10 +1682,10 @@
         ],
         "test_improvement": [
           361.96,
-          85.78
+          461.96
         ],
         "control_improvement": [
-          461.96,
+          85.78,
           185.78
         ],
         "comparative_improvement": [
@@ -1710,10 +1722,10 @@
         ],
         "test_improvement": [
           146.0,
-          34.0
+          246.0
         ],
         "control_improvement": [
-          246.0,
+          34.0,
           134.0
         ],
         "comparative_improvement": [
@@ -1750,10 +1762,10 @@
         ],
         "test_improvement": [
           164.23,
-          34.0
+          264.23
         ],
         "control_improvement": [
-          264.23,
+          34.0,
           134.0
         ],
         "comparative_improvement": [
@@ -1790,10 +1802,10 @@
         ],
         "test_improvement": [
           146.0,
-          31.37
+          246.0
         ],
         "control_improvement": [
-          246.0,
+          31.37,
           131.37
         ],
         "comparative_improvement": [
@@ -1830,10 +1842,10 @@
         ],
         "test_improvement": [
           162.21,
-          31.37
+          262.21
         ],
         "control_improvement": [
-          262.21,
+          31.37,
           131.37
         ],
         "comparative_improvement": [

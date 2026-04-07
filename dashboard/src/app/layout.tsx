@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Cupping Patch Efficacy Dashboard",
-  description: "음압패치 효과 검증 임상시험 대시보드 — 14개 보고서 데이터 기반",
+  title: "휴먼피부임상센터 음압패치 임상결과",
+  description: "휴먼피부임상센터 음압패치 임상결과 — 14개 보고서 데이터 기반",
 };
 
 export default function RootLayout({
