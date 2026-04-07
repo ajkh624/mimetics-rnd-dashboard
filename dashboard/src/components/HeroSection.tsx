@@ -68,14 +68,14 @@ export default function HeroSection({ data, lang }: { data: Report[]; lang: Lang
       {/* Hero 3 KPIs */}
       <div className="grid grid-cols-3 gap-3 mb-4">
         {heroItems.map((kpi) => (
-          <div key={kpi.metricKo} className="bg-[#1a1a2e] rounded-2xl p-6 text-center">
-            <div className="text-xs text-white/40 font-semibold uppercase tracking-wider mb-1">
+          <div key={kpi.metricKo} className="bg-[#1a1a2e] rounded-2xl p-4 sm:p-6 text-center">
+            <div className="text-[10px] sm:text-xs text-white/40 font-semibold uppercase tracking-wider mb-1">
               {kpi.metric}
             </div>
-            <div className="text-4xl font-black text-[#FF6B6B] leading-tight">
+            <div className="text-2xl sm:text-4xl font-black text-[#FF6B6B] leading-tight">
               +{kpi.max.toFixed(0)}%
             </div>
-            <div className="text-[11px] text-white/30 mt-1">
+            <div className="text-[10px] sm:text-[11px] text-white/30 mt-1">
               {t("kpi_products", lang, { count: kpi.count, avg: kpi.avg.toFixed(0) })}
             </div>
           </div>

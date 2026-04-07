@@ -86,6 +86,7 @@ const T: Record<string, Record<Lang, string>> = {
   tab_absorption: { ko: "흡수도", en: "Absorption", ja: "吸収度" },
   tab_safety: { ko: "안전성", en: "Safety", ja: "安全性" },
   tab_sources: { ko: "데이터 출처", en: "Data Sources", ja: "データ出典" },
+  nav_heatmap: { ko: "히트맵", en: "Heatmap", ja: "ヒートマップ" },
   pilot_label: { ko: "[예비]", en: "[Pilot]", ja: "[予備]" },
 };
 

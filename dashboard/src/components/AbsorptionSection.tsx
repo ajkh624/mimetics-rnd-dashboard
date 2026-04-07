@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import { Report, Lang } from "@/lib/types";
 import { t, tMetric, tProduct, tBodyPart } from "@/lib/i18n";
 
@@ -18,6 +17,8 @@ interface AbsRow {
 
 function getAbsorptionData(data: Report[], lang: Lang): AbsRow[] {
   const rows: AbsRow[] = [];
+  const labelCount: Record<string, number> = {};
+
   for (const r of data) {
     if (r.type !== "absorption") continue;
     const pilot = r.subjects <= 5 ? ` ${t("pilot_label", lang)}` : "";
@@ -25,9 +26,17 @@ function getAbsorptionData(data: Report[], lang: Lang): AbsRow[] {
       const test = m.test_improvement?.[0] ?? null;
       const ctrl = m.control_improvement?.[0] ?? null;
       const comp = m.comparative_improvement?.[0] ?? null;
+      const baseLabel = `[${r.report_code}] ${tProduct(r.product, lang)} (${tBodyPart(r.body_part ?? "", lang)}, n=${r.subjects})${pilot}`;
+      const metricKey = tMetric(m.metric, lang);
+      const dedupeKey = `${baseLabel}__${metricKey}`;
+
+      // 중복 라벨 구분 (패치A/B)
+      labelCount[dedupeKey] = (labelCount[dedupeKey] ?? 0) + 1;
+      const suffix = labelCount[dedupeKey] > 1 ? ` [${lang === "ko" ? "조건" : "Cond"} ${labelCount[dedupeKey]}]` : "";
+
       rows.push({
-        label: `[${r.report_code}] ${tProduct(r.product, lang)} (${tBodyPart(r.body_part ?? "", lang)}, n=${r.subjects})${pilot}`,
-        metric: tMetric(m.metric, lang),
+        label: baseLabel + suffix,
+        metric: metricKey,
         test, ctrl, comp,
       });
     }
@@ -41,6 +50,7 @@ export default function AbsorptionSection({ data, lang }: { data: Report[]; lang
   const [activeMetric, setActiveMetric] = useState(metrics[0] ?? "");
 
   const filtered = rows.filter((r) => r.metric === activeMetric).sort((a, b) => (a.comp ?? 0) - (b.comp ?? 0));
+  const compLabel = lang === "ko" ? "대조군 대비" : lang === "ja" ? "対照群比" : "vs Control";
 
   return (
     <div id="sec-absorption">
@@ -63,24 +73,69 @@ export default function AbsorptionSection({ data, lang }: { data: Report[]; lang
         ))}
       </div>
 
-      <ResponsiveContainer width="100%" height={Math.max(250, filtered.length * 70 + 80)}>
-        <BarChart data={filtered} layout="vertical" margin={{ left: 320, right: 40 }}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis type="number" label={{ value: t("axis_improvement", lang), position: "bottom" }} />
-          <YAxis dataKey="label" type="category" width={310} tick={{ fontSize: 10 }} />
-          <Tooltip formatter={(v) => `${Number(v).toFixed(0)}%`} />
-          <Legend />
-          <Bar dataKey="ctrl" fill={COLOR_CONTROL} name={t("legend_control", lang)} />
-          <Bar dataKey="test" fill={COLOR_TEST} name={t("legend_test", lang)} />
-        </BarChart>
-      </ResponsiveContainer>
+      {/* Absorption detail cards */}
+      <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+        <div className="space-y-4">
+          {filtered.map((row, i) => {
+            const maxVal = Math.max(row.test ?? 0, row.ctrl ?? 0, 1);
+            return (
+              <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs font-medium text-gray-700 max-w-[55%]">{row.label}</span>
+                  {row.comp != null && (
+                    <span className="bg-[#FF6B6B] text-white text-xs font-bold px-3 py-1 rounded-full shrink-0">
+                      {compLabel} +{row.comp.toFixed(0)}%
+                    </span>
+                  )}
+                </div>
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] text-gray-400 w-24 text-right shrink-0">{t("legend_control", lang)}</span>
+                    <div className="flex-1 bg-gray-100 rounded-full h-5 relative overflow-hidden">
+                      <div
+                        className="h-full rounded-full flex items-center justify-end pr-2"
+                        style={{
+                          width: `${Math.min(((row.ctrl ?? 0) / maxVal) * 100, 100)}%`,
+                          background: COLOR_CONTROL,
+                          minWidth: row.ctrl ? "40px" : "0",
+                        }}
+                      >
+                        {row.ctrl != null && <span className="text-[10px] font-bold text-white">{row.ctrl.toFixed(0)}%</span>}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] text-gray-400 w-24 text-right shrink-0">{t("legend_test", lang)}</span>
+                    <div className="flex-1 bg-gray-100 rounded-full h-5 relative overflow-hidden">
+                      <div
+                        className="h-full rounded-full flex items-center justify-end pr-2"
+                        style={{
+                          width: `${Math.min(((row.test ?? 0) / maxVal) * 100, 100)}%`,
+                          background: COLOR_TEST,
+                          minWidth: row.test ? "40px" : "0",
+                        }}
+                      >
+                        {row.test != null && <span className="text-[10px] font-bold text-white">{row.test.toFixed(0)}%</span>}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex items-center gap-3 mt-4 text-xs text-gray-400 justify-center">
+          <span className="flex items-center gap-1"><span className="inline-block w-3 h-3 rounded-full" style={{ background: COLOR_CONTROL }} /> {t("legend_control", lang)}</span>
+          <span className="flex items-center gap-1"><span className="inline-block w-3 h-3 rounded-full" style={{ background: COLOR_TEST }} /> {t("legend_test", lang)}</span>
+        </div>
+      </div>
 
       {/* Data table */}
       <details className="mt-4">
         <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
           {lang === "ko" ? "흡수도 상세 데이터 테이블" : "Detailed Data Table"}
         </summary>
-        <div className="overflow-x-auto mt-2">
+        <div className="overflow-x-auto mt-2 bg-white rounded-xl p-3 border border-gray-100">
           <table className="w-full text-xs border-collapse">
             <thead>
               <tr className="bg-gray-50">

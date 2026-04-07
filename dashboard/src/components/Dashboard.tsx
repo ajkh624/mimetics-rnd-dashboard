@@ -15,12 +15,12 @@ const LANG_OPTIONS: { label: string; value: Lang }[] = [
   { label: "日本語", value: "ja" },
 ];
 
-const NAV_ITEMS: { id: string; labelKey: string }[] = [
-  { id: "sec-efficacy", labelKey: "tab_efficacy" },
-  { id: "sec-heatmap", labelKey: "sec3_title" },
-  { id: "sec-absorption", labelKey: "tab_absorption" },
-  { id: "sec-safety", labelKey: "tab_safety" },
-  { id: "sec-sources", labelKey: "tab_sources" },
+const NAV_ITEMS: { id: string; labelKey: string; icon: string }[] = [
+  { id: "sec-efficacy", labelKey: "tab_efficacy", icon: "📊" },
+  { id: "sec-heatmap", labelKey: "nav_heatmap", icon: "🗺️" },
+  { id: "sec-absorption", labelKey: "tab_absorption", icon: "💧" },
+  { id: "sec-safety", labelKey: "tab_safety", icon: "🛡️" },
+  { id: "sec-sources", labelKey: "tab_sources", icon: "📋" },
 ];
 
 export default function Dashboard({ data }: { data: Report[] }) {
@@ -48,24 +48,35 @@ export default function Dashboard({ data }: { data: Report[] }) {
       {/* Hero + KPIs */}
       <HeroSection data={data} lang={lang} />
 
-      {/* Navigation bar */}
-      <div className="flex gap-2 justify-center flex-wrap py-3 mb-4">
-        {NAV_ITEMS.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => scrollTo(item.id)}
-            className="px-5 py-2 rounded-full text-sm font-semibold text-gray-600 bg-white border border-gray-200 hover:bg-[#FF6B6B] hover:text-white hover:border-[#FF6B6B] transition-colors"
-          >
-            {t(item.labelKey, lang)}
-          </button>
-        ))}
+      {/* Sticky Navigation bar */}
+      <div className="sticky top-0 z-50 bg-[#f5f6f8]/95 backdrop-blur-sm py-3 -mx-4 px-4 mb-6 border-b border-gray-200">
+        <div className="flex gap-2 justify-center flex-wrap">
+          {NAV_ITEMS.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollTo(item.id)}
+              className="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 bg-white border border-gray-200 hover:bg-[#FF6B6B] hover:text-white hover:border-[#FF6B6B] transition-all shadow-sm hover:shadow"
+            >
+              <span className="mr-1">{item.icon}</span>
+              {t(item.labelKey, lang)}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Sections */}
       <EfficacySection data={data} lang={lang} />
+      <div className="my-8" />
       <AbsorptionSection data={data} lang={lang} />
+      <div className="my-8" />
       <SafetySection data={data} lang={lang} />
+      <div className="my-8" />
       <DataSourcesSection data={data} lang={lang} />
+
+      {/* Footer */}
+      <div className="mt-12 py-6 border-t border-gray-200 text-center text-xs text-gray-400">
+        &copy; 2025 Mimetics Inc. | {lang === "ko" ? "14개 임상시험 보고서 기반 자동 파싱 데이터" : "Auto-parsed from 14 clinical trial reports"}
+      </div>
     </div>
   );
 }
