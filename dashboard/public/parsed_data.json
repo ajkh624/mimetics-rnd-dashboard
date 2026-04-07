@@ -1,0 +1,1892 @@
+[
+  {
+    "report_code": "HR-P25-0036",
+    "type": "absorption",
+    "product": "옥타겔",
+    "duration": "1회",
+    "subjects": 3,
+    "title": "피부 흡수도 비교(예비시험)",
+    "body_part": "전박",
+    "metrics": [
+      {
+        "metric": "흡수량",
+        "table_title": "피부 흡수량, 피부 흡수 깊이, 피부 흡수 속도 평가 결과",
+        "test_values": [
+          {
+            "mean": 104818.43,
+            "sd": 1069.82
+          },
+          {
+            "mean": 104818.43,
+            "sd": 1069.82
+          },
+          {
+            "mean": 410370.33,
+            "sd": 15032.15
+          },
+          {
+            "mean": 325936.72,
+            "sd": 23762.5
+          },
+          {
+            "mean": 13.83,
+            "sd": 2.75
+          },
+          {
+            "mean": 13.83,
+            "sd": 2.75
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 34.0,
+            "sd": 13.43
+          },
+          {
+            "mean": 14.67,
+            "sd": 3.75
+          },
+          {
+            "mean": 27.67,
+            "sd": 5.51
+          },
+          {
+            "mean": 27.67,
+            "sd": 5.51
+          },
+          {
+            "mean": 68.0,
+            "sd": 26.85
+          },
+          {
+            "mean": 29.33,
+            "sd": 7.51
+          }
+        ],
+        "test_improvement": [
+          291.51
+        ],
+        "control_improvement": [
+          210.95
+        ],
+        "comparative_improvement": [
+          38.18,
+          145.78,
+          6.02,
+          2320.0,
+          145.78,
+          6.02,
+          2320.0
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-R25-1063",
+    "type": "efficacy",
+    "product": "옥타겔",
+    "duration": "2주",
+    "subjects": 20,
+    "title": "24시간 보습 유지 효과 외",
+    "body_part": "뺨/눈가/팔자",
+    "metrics": [
+      {
+        "metric": "보습",
+        "table_title": "평균 유전율 평가 결과",
+        "test_values": [
+          {
+            "mean": 5.98,
+            "sd": 1.41
+          },
+          {
+            "mean": 6.36,
+            "sd": 1.98
+          },
+          {
+            "mean": 28.08,
+            "sd": 7.35
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 19.29,
+            "sd": 7.81
+          },
+          {
+            "mean": 12.81,
+            "sd": 6.2
+          },
+          {
+            "mean": 9.21,
+            "sd": 3.74
+          }
+        ],
+        "test_improvement": [
+          369.69,
+          114.3
+        ],
+        "control_improvement": [
+          203.17,
+          44.75
+        ],
+        "comparative_improvement": [
+          81.96,
+          155.43
+        ],
+        "between_group_p": [
+          "<0.001",
+          "0.004"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001",
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "탄력",
+        "table_title": "탄력 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.59,
+            "sd": 0.04
+          },
+          {
+            "mean": 0.59,
+            "sd": 0.04
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.67,
+            "sd": 0.04
+          },
+          {
+            "mean": 0.62,
+            "sd": 0.04
+          }
+        ],
+        "test_improvement": [
+          12.31
+        ],
+        "control_improvement": [
+          3.96
+        ],
+        "comparative_improvement": [
+          210.9
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "주름(눈가)",
+        "table_title": "주름 평균 깊이 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.1135,
+            "sd": 0.025
+          },
+          {
+            "mean": 0.1126,
+            "sd": 0.0197
+          },
+          {
+            "mean": 0.1003,
+            "sd": 0.0181
+          },
+          {
+            "mean": 0.105,
+            "sd": 0.0171
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.1212,
+            "sd": 0.0367
+          },
+          {
+            "mean": 0.1108,
+            "sd": 0.0292
+          },
+          {
+            "mean": 0.1033,
+            "sd": 0.0316
+          },
+          {
+            "mean": 0.1001,
+            "sd": 0.0258
+          }
+        ],
+        "test_improvement": [
+          11.65,
+          6.76
+        ],
+        "control_improvement": [
+          14.78,
+          9.72
+        ],
+        "comparative_improvement": [
+          72.27,
+          52.1
+        ],
+        "between_group_p": [
+          "0.030"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "피부결",
+        "table_title": "산술평균거칠기 평가 결과",
+        "test_values": [
+          {
+            "mean": 7.58,
+            "sd": 1.62
+          },
+          {
+            "mean": 7.18,
+            "sd": 1.27
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 6.68,
+            "sd": 1.32
+          },
+          {
+            "mean": 6.81,
+            "sd": 1.17
+          }
+        ],
+        "test_improvement": [
+          11.9
+        ],
+        "control_improvement": [
+          5.21
+        ],
+        "comparative_improvement": [
+          128.53
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "피부밀도",
+        "table_title": "피부 치밀도 평가 결과",
+        "test_values": [
+          {
+            "mean": 52.85,
+            "sd": 5.76
+          },
+          {
+            "mean": 52.81,
+            "sd": 6.11
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 58.86,
+            "sd": 5.34
+          },
+          {
+            "mean": 55.65,
+            "sd": 5.2
+          }
+        ],
+        "test_improvement": [
+          11.38
+        ],
+        "control_improvement": [
+          5.37
+        ],
+        "comparative_improvement": [
+          111.96
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "모공",
+        "table_title": "평균 모공 부피 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.0017,
+            "sd": 0.0007
+          },
+          {
+            "mean": 0.0016,
+            "sd": 0.0008
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.0013,
+            "sd": 0.0006
+          },
+          {
+            "mean": 0.0014,
+            "sd": 0.0007
+          }
+        ],
+        "test_improvement": [
+          24.42
+        ],
+        "control_improvement": [
+          12.68
+        ],
+        "comparative_improvement": [
+          92.61
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "리프팅",
+        "table_title": "피부 처짐 각도 평가 결과",
+        "test_values": [
+          {
+            "mean": 37.57,
+            "sd": 4.66
+          },
+          {
+            "mean": 37.94,
+            "sd": 4.64
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 35.21,
+            "sd": 4.69
+          },
+          {
+            "mean": 36.84,
+            "sd": 4.62
+          }
+        ],
+        "test_improvement": [
+          6.3
+        ],
+        "control_improvement": [
+          2.92
+        ],
+        "comparative_improvement": [
+          115.68
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-R25-1123",
+    "type": "efficacy",
+    "product": "GFC셀 파우더+솔루션",
+    "duration": "4주",
+    "subjects": 23,
+    "title": "눈가 주름 개선 외(대조군2,1)",
+    "body_part": "눈가",
+    "group_labels": {
+      "test": "대조군2",
+      "control": "대조군1"
+    },
+    "metrics": [
+      {
+        "metric": "주름(눈가)",
+        "table_title": "주름 평균 깊이 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.1002,
+            "sd": 0.0171
+          },
+          {
+            "mean": 0.1003,
+            "sd": 0.0168
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.0946,
+            "sd": 0.0149
+          },
+          {
+            "mean": 0.0971,
+            "sd": 0.0156
+          }
+        ],
+        "test_improvement": [
+          5.62
+        ],
+        "control_improvement": [
+          3.21
+        ],
+        "comparative_improvement": [
+          74.81
+        ],
+        "between_group_p": [
+          "0.021"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "탄력",
+        "table_title": "R2 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.6144,
+            "sd": 0.0699
+          },
+          {
+            "mean": 0.6189,
+            "sd": 0.06
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.6409,
+            "sd": 0.0723
+          },
+          {
+            "mean": 0.6318,
+            "sd": 0.0569
+          }
+        ],
+        "test_improvement": [
+          4.32
+        ],
+        "control_improvement": [
+          2.09
+        ],
+        "comparative_improvement": [
+          107.02
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "보습",
+        "table_title": "평균 유전율 평가 결과",
+        "test_values": [
+          {
+            "mean": 24.63,
+            "sd": 3.98
+          },
+          {
+            "mean": 24.25,
+            "sd": 5.06
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 33.86,
+            "sd": 5.89
+          },
+          {
+            "mean": 31.09,
+            "sd": 6.47
+          }
+        ],
+        "test_improvement": [
+          37.51
+        ],
+        "control_improvement": [
+          28.2
+        ],
+        "comparative_improvement": [
+          33.01
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001"
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-R25-1124",
+    "type": "efficacy",
+    "product": "GFC셀 파우더+솔루션+MTS",
+    "duration": "4주",
+    "subjects": 24,
+    "title": "눈가주름 개선 외(대조군3,시험군1)",
+    "body_part": "눈가",
+    "group_labels": {
+      "test": "시험군1",
+      "control": "대조군3"
+    },
+    "metrics": [
+      {
+        "metric": "주름(눈가)",
+        "table_title": "주름 평균 깊이 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.1013,
+            "sd": 0.017
+          },
+          {
+            "mean": 0.1007,
+            "sd": 0.0169
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.0914,
+            "sd": 0.0187
+          },
+          {
+            "mean": 0.0949,
+            "sd": 0.0174
+          }
+        ],
+        "test_improvement": [
+          9.76
+        ],
+        "control_improvement": [
+          5.79
+        ],
+        "comparative_improvement": [
+          68.52
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "탄력",
+        "table_title": "R2 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.5943,
+            "sd": 0.0678
+          },
+          {
+            "mean": 0.5863,
+            "sd": 0.0639
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.6429,
+            "sd": 0.0667
+          },
+          {
+            "mean": 0.6119,
+            "sd": 0.0623
+          }
+        ],
+        "test_improvement": [
+          8.18
+        ],
+        "control_improvement": [
+          4.37
+        ],
+        "comparative_improvement": [
+          87.14
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "보습",
+        "table_title": "평균 유전율 평가 결과",
+        "test_values": [
+          {
+            "mean": 25.89,
+            "sd": 3.11
+          },
+          {
+            "mean": 25.67,
+            "sd": 2.92
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 38.41,
+            "sd": 4.25
+          },
+          {
+            "mean": 34.71,
+            "sd": 3.49
+          }
+        ],
+        "test_improvement": [
+          48.37
+        ],
+        "control_improvement": [
+          35.21
+        ],
+        "comparative_improvement": [
+          37.38
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-R25-1129",
+    "type": "efficacy",
+    "product": "Stem Science Eye 크림",
+    "duration": "4주",
+    "subjects": 21,
+    "title": "눈가 주름 개선 외(Stem)",
+    "body_part": "눈가/눈밑",
+    "metrics": [
+      {
+        "metric": "주름(눈가)",
+        "table_title": "주름 평균 깊이 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.0917,
+            "sd": 0.0138
+          },
+          {
+            "mean": 0.095,
+            "sd": 0.015
+          },
+          {
+            "mean": 0.0851,
+            "sd": 0.0117
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.0912,
+            "sd": 0.0153
+          },
+          {
+            "mean": 0.0799,
+            "sd": 0.0108
+          },
+          {
+            "mean": 0.0881,
+            "sd": 0.0143
+          }
+        ],
+        "test_improvement": [
+          7.15,
+          12.8
+        ],
+        "control_improvement": [
+          3.99,
+          7.22
+        ],
+        "comparative_improvement": [
+          79.28,
+          77.43
+        ],
+        "between_group_p": [
+          "0.004",
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001",
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "보습",
+        "table_title": "평균 유전율 평가 결과",
+        "test_values": [
+          {
+            "mean": 17.0,
+            "sd": 4.02
+          },
+          {
+            "mean": 18.89,
+            "sd": 4.66
+          },
+          {
+            "mean": 23.02,
+            "sd": 4.31
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 21.52,
+            "sd": 4.46
+          },
+          {
+            "mean": 25.43,
+            "sd": 4.4
+          },
+          {
+            "mean": 22.51,
+            "sd": 4.6
+          }
+        ],
+        "test_improvement": [
+          35.41,
+          49.6
+        ],
+        "control_improvement": [
+          13.91,
+          19.17
+        ],
+        "comparative_improvement": [
+          154.48,
+          158.77
+        ],
+        "between_group_p": [
+          "<0.001",
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001",
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "다크서클",
+        "table_title": "피부색 밝기 평가 결과",
+        "test_values": [
+          {
+            "mean": 59.05,
+            "sd": 2.45
+          },
+          {
+            "mean": 59.13,
+            "sd": 2.51
+          },
+          {
+            "mean": 60.06,
+            "sd": 2.46
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 59.49,
+            "sd": 2.45
+          },
+          {
+            "mean": 60.83,
+            "sd": 2.43
+          },
+          {
+            "mean": 60.21,
+            "sd": 2.64
+          }
+        ],
+        "test_improvement": [
+          1.72,
+          3.01
+        ],
+        "control_improvement": [
+          0.62,
+          1.83
+        ],
+        "comparative_improvement": [
+          178.63,
+          64.93
+        ],
+        "between_group_p": [
+          "0.001",
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001",
+          "<0.001",
+          "<0.001"
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-R25-1130",
+    "type": "efficacy",
+    "product": "Clini Science Eye 크림",
+    "duration": "4주",
+    "subjects": 21,
+    "title": "눈가 주름 개선 외(Clini)",
+    "body_part": "눈가/눈밑",
+    "metrics": [
+      {
+        "metric": "주름(눈가)",
+        "table_title": "주름 평균 깊이 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.0948,
+            "sd": 0.0118
+          },
+          {
+            "mean": 0.0913,
+            "sd": 0.0131
+          },
+          {
+            "mean": 0.0869,
+            "sd": 0.0107
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.0871,
+            "sd": 0.0136
+          },
+          {
+            "mean": 0.0818,
+            "sd": 0.0109
+          },
+          {
+            "mean": 0.0831,
+            "sd": 0.0142
+          }
+        ],
+        "test_improvement": [
+          8.36,
+          13.73
+        ],
+        "control_improvement": [
+          4.65,
+          9.0
+        ],
+        "comparative_improvement": [
+          79.79,
+          52.43
+        ],
+        "between_group_p": [
+          "0.001",
+          "0.002"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001",
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "보습",
+        "table_title": "평균 유전율 평가 결과",
+        "test_values": [
+          {
+            "mean": 18.24,
+            "sd": 5.03
+          },
+          {
+            "mean": 20.84,
+            "sd": 4.92
+          },
+          {
+            "mean": 26.0,
+            "sd": 5.22
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 24.35,
+            "sd": 4.69
+          },
+          {
+            "mean": 28.6,
+            "sd": 4.42
+          },
+          {
+            "mean": 26.03,
+            "sd": 4.32
+          }
+        ],
+        "test_improvement": [
+          42.58,
+          56.81
+        ],
+        "control_improvement": [
+          16.88,
+          24.93
+        ],
+        "comparative_improvement": [
+          152.3,
+          127.91
+        ],
+        "between_group_p": [
+          "<0.001",
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001",
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "다크서클",
+        "table_title": "피부색 밝기 평가 결과",
+        "test_values": [
+          {
+            "mean": 58.92,
+            "sd": 1.49
+          },
+          {
+            "mean": 59.32,
+            "sd": 1.5
+          },
+          {
+            "mean": 60.06,
+            "sd": 1.55
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 59.9,
+            "sd": 1.6
+          },
+          {
+            "mean": 60.76,
+            "sd": 1.66
+          },
+          {
+            "mean": 60.44,
+            "sd": 1.68
+          }
+        ],
+        "test_improvement": [
+          1.94,
+          3.13
+        ],
+        "control_improvement": [
+          0.99,
+          1.9
+        ],
+        "comparative_improvement": [
+          95.91,
+          64.48
+        ],
+        "between_group_p": [
+          "<0.001",
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "0.002",
+          "<0.001",
+          "<0.001"
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-R26-0077",
+    "type": "efficacy",
+    "product": "Exo H-Serum",
+    "duration": "2주",
+    "subjects": 20,
+    "title": "눈가 주름 외",
+    "body_part": "눈가/뺨",
+    "metrics": [
+      {
+        "metric": "주름(눈가)",
+        "table_title": "주름 평균 깊이 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.1073,
+            "sd": 0.0245
+          },
+          {
+            "mean": 0.1069,
+            "sd": 0.0273
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.099,
+            "sd": 0.0246
+          },
+          {
+            "mean": 0.1036,
+            "sd": 0.0266
+          }
+        ],
+        "test_improvement": [
+          7.72
+        ],
+        "control_improvement": [
+          3.06
+        ],
+        "comparative_improvement": [
+          152.42
+        ],
+        "between_group_p": [
+          "0.011"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "0.003"
+        ]
+      },
+      {
+        "metric": "탄력",
+        "table_title": "R2 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.6405,
+            "sd": 0.0689
+          },
+          {
+            "mean": 0.6395,
+            "sd": 0.0671
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.6797,
+            "sd": 0.0671
+          },
+          {
+            "mean": 0.6607,
+            "sd": 0.0625
+          }
+        ],
+        "test_improvement": [
+          6.11
+        ],
+        "control_improvement": [
+          3.32
+        ],
+        "comparative_improvement": [
+          84.07
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "보습",
+        "table_title": "평균 유전율 평가 결과",
+        "test_values": [
+          {
+            "mean": 25.21,
+            "sd": 3.56
+          },
+          {
+            "mean": 24.92,
+            "sd": 4.13
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 29.75,
+            "sd": 3.83
+          },
+          {
+            "mean": 27.05,
+            "sd": 4.14
+          }
+        ],
+        "test_improvement": [
+          18.01
+        ],
+        "control_improvement": [
+          8.53
+        ],
+        "comparative_improvement": [
+          111.24
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-R25-0666",
+    "type": "efficacy",
+    "product": "뉴라덤 코어타임 앰플",
+    "duration": "2주(+4주 색소)",
+    "subjects": 20,
+    "title": "피부 주름 개선 외",
+    "body_part": "눈가/뺨",
+    "metrics": [
+      {
+        "metric": "주름(눈가)",
+        "table_title": "주름 평균 깊이 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.1059,
+            "sd": 0.0204
+          },
+          {
+            "mean": 0.1011,
+            "sd": 0.0198
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.0954,
+            "sd": 0.017
+          },
+          {
+            "mean": 0.0974,
+            "sd": 0.0177
+          }
+        ],
+        "test_improvement": [
+          9.91
+        ],
+        "control_improvement": [
+          3.66
+        ],
+        "comparative_improvement": [
+          170.92
+        ],
+        "between_group_p": [
+          "0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "0.024"
+        ]
+      },
+      {
+        "metric": "탄력",
+        "table_title": "R2 평가 결과",
+        "test_values": [
+          {
+            "mean": 0.6597,
+            "sd": 0.055
+          },
+          {
+            "mean": 0.6576,
+            "sd": 0.0499
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.7183,
+            "sd": 0.0628
+          },
+          {
+            "mean": 0.6871,
+            "sd": 0.0563
+          }
+        ],
+        "test_improvement": [
+          8.89
+        ],
+        "control_improvement": [
+          4.49
+        ],
+        "comparative_improvement": [
+          97.96
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "피부 광",
+        "table_title": "피부 윤기 평가 결과",
+        "test_values": [
+          {
+            "mean": 62.65,
+            "sd": 6.28
+          },
+          {
+            "mean": 63.02,
+            "sd": 5.84
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 70.6,
+            "sd": 5.06
+          },
+          {
+            "mean": 66.45,
+            "sd": 5.51
+          }
+        ],
+        "test_improvement": [
+          12.69
+        ],
+        "control_improvement": [
+          5.45
+        ],
+        "comparative_improvement": [
+          132.91
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "색소",
+        "table_title": "Melanin color 평가 결과",
+        "test_values": [
+          {
+            "mean": 71.57,
+            "sd": 22.49
+          },
+          {
+            "mean": 67.67,
+            "sd": 25.4
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 59.29,
+            "sd": 19.5
+          },
+          {
+            "mean": 63.21,
+            "sd": 23.25
+          }
+        ],
+        "test_improvement": [
+          17.17
+        ],
+        "control_improvement": [
+          6.58
+        ],
+        "comparative_improvement": [
+          160.71
+        ],
+        "between_group_p": [
+          "<0.001"
+        ],
+        "within_group_p": [
+          "<0.001",
+          "0.001"
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HD-R24-0043",
+    "type": "efficacy",
+    "product": "CNP 더마 앤서 앰플",
+    "duration": "2주(+4주 색소)",
+    "subjects": 10,
+    "title": "피부 주름 개선 외(영문)",
+    "body_part": "눈가/뺨",
+    "lang": "en",
+    "metrics": [
+      {
+        "metric": "주름(눈가)",
+        "table_title": "The result by wrinkle average depth",
+        "test_values": [
+          {
+            "mean": 0.123,
+            "sd": 0.0214
+          },
+          {
+            "mean": 0.1068,
+            "sd": 0.0213
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.1098,
+            "sd": 0.0197
+          },
+          {
+            "mean": 0.1001,
+            "sd": 0.0211
+          }
+        ],
+        "test_improvement": [
+          10.74
+        ],
+        "control_improvement": [
+          6.27
+        ],
+        "comparative_improvement": [
+          71.4
+        ]
+      },
+      {
+        "metric": "탄력",
+        "table_title": "The result by skin elasticity",
+        "test_values": [
+          {
+            "mean": 0.59,
+            "sd": 0.04
+          },
+          {
+            "mean": 0.59,
+            "sd": 0.05
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 0.62,
+            "sd": 0.04
+          },
+          {
+            "mean": 0.6,
+            "sd": 0.05
+          }
+        ],
+        "test_improvement": [
+          4.11
+        ],
+        "control_improvement": [
+          2.03
+        ],
+        "comparative_improvement": [
+          102.66
+        ]
+      },
+      {
+        "metric": "보습",
+        "table_title": "The result by average dielectric constant",
+        "test_values": [
+          {
+            "mean": 36.8,
+            "sd": 7.3
+          },
+          {
+            "mean": 36.1,
+            "sd": 7.31
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 47.34,
+            "sd": 6.44
+          },
+          {
+            "mean": 40.16,
+            "sd": 7.44
+          }
+        ],
+        "test_improvement": [
+          28.63
+        ],
+        "control_improvement": [
+          11.24
+        ],
+        "comparative_improvement": [
+          154.71
+        ]
+      },
+      {
+        "metric": "색소",
+        "table_title": "The result by melanin color",
+        "test_values": [
+          {
+            "mean": 80.21,
+            "sd": 13.67
+          },
+          {
+            "mean": 85.78,
+            "sd": 11.91
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 67.56,
+            "sd": 18.63
+          },
+          {
+            "mean": 81.5,
+            "sd": 14.57
+          }
+        ],
+        "test_improvement": [
+          15.77
+        ],
+        "control_improvement": [
+          4.99
+        ],
+        "comparative_improvement": [
+          216.09
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HE-R24-240219-1",
+    "type": "absorption",
+    "product": "성분에디터 앰플+패치",
+    "duration": "1회",
+    "subjects": 20,
+    "title": "피부 흡수도 시험(뺨)",
+    "body_part": "뺨",
+    "metrics": [
+      {
+        "metric": "흡수량",
+        "table_title": "피부 흡수량 분석 결과",
+        "test_values": [
+          {
+            "mean": 140520.63,
+            "sd": 14101.71
+          },
+          {
+            "mean": 144339.93,
+            "sd": 13734.38
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 593750.95,
+            "sd": 70777.22
+          },
+          {
+            "mean": 308640.87,
+            "sd": 45173.79
+          }
+        ],
+        "test_improvement": [
+          322.54,
+          113.83
+        ],
+        "control_improvement": [
+          422.54,
+          213.83
+        ],
+        "comparative_improvement": [
+          183.35,
+          283.35,
+          100.0
+        ],
+        "between_group_p": [
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "흡수 깊이",
+        "table_title": "피부 흡수 깊이 분석 결과",
+        "test_values": [
+          {
+            "mean": 25.13,
+            "sd": 0.56
+          },
+          {
+            "mean": 25.5,
+            "sd": 0.89
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 66.23,
+            "sd": 5.26
+          },
+          {
+            "mean": 34.88,
+            "sd": 5.26
+          }
+        ],
+        "test_improvement": [
+          163.55,
+          36.78
+        ],
+        "control_improvement": [
+          263.55,
+          136.78
+        ],
+        "comparative_improvement": [
+          344.62,
+          444.62,
+          100.0
+        ],
+        "between_group_p": [
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "흡수 속도",
+        "table_title": "피부 흡수 속도 분석 결과",
+        "test_values": [
+          {
+            "mean": 50.25,
+            "sd": 1.12
+          },
+          {
+            "mean": 51.0,
+            "sd": 1.78
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 132.45,
+            "sd": 10.52
+          },
+          {
+            "mean": 69.75,
+            "sd": 10.52
+          }
+        ],
+        "test_improvement": [
+          163.58,
+          36.76
+        ],
+        "control_improvement": [
+          263.58,
+          136.76
+        ],
+        "comparative_improvement": [
+          344.94,
+          444.94,
+          100.0
+        ],
+        "between_group_p": [
+          "<0.001"
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HE-R24-240219-2",
+    "type": "absorption",
+    "product": "성분에디터 앰플+패치A/B",
+    "duration": "1회",
+    "subjects": 5,
+    "title": "피부 흡수도 시험",
+    "body_part": "전박",
+    "metrics": [
+      {
+        "metric": "흡수량",
+        "table_title": "피부 흡수량 분석 결과",
+        "test_values": [
+          {
+            "mean": 138419.4,
+            "sd": 8007.11
+          },
+          {
+            "mean": 151435.6,
+            "sd": 21005.98
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 537417.9,
+            "sd": 97772.73
+          },
+          {
+            "mean": 339619.5,
+            "sd": 36775.03
+          }
+        ],
+        "test_improvement": [
+          192.62,
+          85.78
+        ],
+        "control_improvement": [
+          292.62,
+          185.78
+        ],
+        "comparative_improvement": [
+          124.55,
+          224.55,
+          100.0
+        ],
+        "between_group_p": [
+          "0.008"
+        ]
+      },
+      {
+        "metric": "흡수량",
+        "table_title": "피부 흡수량 분석 결과",
+        "test_values": [
+          {
+            "mean": 154052.2,
+            "sd": 24051.49
+          },
+          {
+            "mean": 151435.6,
+            "sd": 21005.98
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 659087.8,
+            "sd": 43490.06
+          },
+          {
+            "mean": 339619.5,
+            "sd": 36775.03
+          }
+        ],
+        "test_improvement": [
+          361.96,
+          85.78
+        ],
+        "control_improvement": [
+          461.96,
+          185.78
+        ],
+        "comparative_improvement": [
+          321.97,
+          421.97,
+          100.0
+        ],
+        "between_group_p": [
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "흡수 깊이",
+        "table_title": "피부 흡수 깊이 분석 결과",
+        "test_values": [
+          {
+            "mean": 25.0,
+            "sd": 0.0
+          },
+          {
+            "mean": 25.5,
+            "sd": 0.71
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 61.5,
+            "sd": 3.35
+          },
+          {
+            "mean": 33.5,
+            "sd": 2.85
+          }
+        ],
+        "test_improvement": [
+          146.0,
+          34.0
+        ],
+        "control_improvement": [
+          246.0,
+          134.0
+        ],
+        "comparative_improvement": [
+          329.41,
+          429.41,
+          100.0
+        ],
+        "between_group_p": [
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "흡수 깊이",
+        "table_title": "피부 흡수 깊이 분석 결과",
+        "test_values": [
+          {
+            "mean": 26.2,
+            "sd": 1.25
+          },
+          {
+            "mean": 25.5,
+            "sd": 0.71
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 68.7,
+            "sd": 3.91
+          },
+          {
+            "mean": 33.5,
+            "sd": 2.85
+          }
+        ],
+        "test_improvement": [
+          164.23,
+          34.0
+        ],
+        "control_improvement": [
+          264.23,
+          134.0
+        ],
+        "comparative_improvement": [
+          383.03,
+          483.03,
+          100.0
+        ],
+        "between_group_p": [
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "흡수 속도",
+        "table_title": "피부 흡수 속도 분석 결과",
+        "test_values": [
+          {
+            "mean": 50.0,
+            "sd": 0.0
+          },
+          {
+            "mean": 51.0,
+            "sd": 1.41
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 123.0,
+            "sd": 6.71
+          },
+          {
+            "mean": 67.0,
+            "sd": 5.7
+          }
+        ],
+        "test_improvement": [
+          146.0,
+          31.37
+        ],
+        "control_improvement": [
+          246.0,
+          131.37
+        ],
+        "comparative_improvement": [
+          365.38,
+          465.38,
+          100.0
+        ],
+        "between_group_p": [
+          "<0.001"
+        ]
+      },
+      {
+        "metric": "흡수 속도",
+        "table_title": "피부 흡수 속도 분석 결과",
+        "test_values": [
+          {
+            "mean": 52.4,
+            "sd": 2.51
+          },
+          {
+            "mean": 51.0,
+            "sd": 1.41
+          }
+        ],
+        "control_values": [
+          {
+            "mean": 137.4,
+            "sd": 7.83
+          },
+          {
+            "mean": 67.0,
+            "sd": 5.7
+          }
+        ],
+        "test_improvement": [
+          162.21,
+          31.37
+        ],
+        "control_improvement": [
+          262.21,
+          131.37
+        ],
+        "comparative_improvement": [
+          417.06,
+          517.06,
+          100.0
+        ],
+        "between_group_p": [
+          "<0.001"
+        ]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-0032-21",
+    "type": "safety",
+    "product": "문어 흡반 구조 모사 피부 패치",
+    "title": "자극테스트",
+    "irritation_index": 0.07,
+    "result": "비자극성",
+    "safety_data": {
+      "product": "문어 흡반 구조 모사 피부 패치",
+      "title": "자극테스트",
+      "irritation_index": 0.07,
+      "result": "비자극성"
+    }
+  },
+  {
+    "report_code": "HM-0086-01",
+    "type": "safety",
+    "product": "Stem Science Eye+음압패치",
+    "title": "저자극테스트",
+    "irritation_index": 0.18,
+    "result": "비자극성",
+    "safety_data": {
+      "product": "Stem Science Eye+음압패치",
+      "title": "저자극테스트",
+      "irritation_index": 0.18,
+      "result": "비자극성"
+    }
+  },
+  {
+    "report_code": "HM-0086-02",
+    "type": "safety",
+    "product": "Clini Science Eye+음압패치",
+    "title": "저자극테스트",
+    "irritation_index": 0.17,
+    "result": "비자극성",
+    "safety_data": {
+      "product": "Clini Science Eye+음압패치",
+      "title": "저자극테스트",
+      "irritation_index": 0.17,
+      "result": "비자극성"
+    }
+  }
+]
