@@ -21,6 +21,7 @@ from charts import (
     COLOR_CONTROL,
 )
 from i18n import t, t_metric, t_product, t_body_part, t_safety
+from advisor import render_advisor_tab
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "parsed_data.json")
 
@@ -57,6 +58,17 @@ def render_custom_css():
 
     /* 섹션 앵커 오프셋 */
     .section-anchor { scroll-margin-top: 20px; }
+
+    /* 모바일 반응형 */
+    @media (max-width: 768px) {
+        .stApp { padding: 0 4px; }
+        .section-title { font-size: 17px; margin: 20px 0 8px; }
+        .explain-box { font-size: 12px; padding: 10px 12px; }
+        /* Plotly 차트 가로 스크롤 */
+        [data-testid="stPlotlyChart"] { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        /* 사이드바 기본 접힘 */
+        [data-testid="stSidebar"] { min-width: 0 !important; }
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -71,10 +83,11 @@ def render_hero(data, lang):
     # 다크 배경 Hero 헤더
     st.markdown(
         f'<div style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%);'
-        f'border-radius:20px;padding:40px 32px 20px;text-align:center;margin-bottom:8px;">'
-        f'<div style="font-size:32px;font-weight:900;color:#fff;margin-bottom:6px;">'
+        f'border-radius:20px;padding:clamp(20px,5vw,40px) clamp(16px,4vw,32px) 20px;'
+        f'text-align:center;margin-bottom:8px;">'
+        f'<div style="font-size:clamp(22px,5vw,32px);font-weight:900;color:#fff;margin-bottom:6px;">'
         f'{t("hero_title", lang)}</div>'
-        f'<div style="color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:24px;">'
+        f'<div style="color:rgba(255,255,255,0.6);font-size:clamp(12px,2.5vw,14px);margin-bottom:24px;">'
         f'{t("hero_subtitle", lang)}</div>'
         f'</div>',
         unsafe_allow_html=True,
@@ -86,11 +99,11 @@ def render_hero(data, lang):
         val_str = f"+{kpi['max']:.0f}%"
         detail = t("kpi_products_avg", lang, count=kpi["count"], avg=kpi["avg"])
         col.markdown(
-            f'<div style="background:#1a1a2e;border-radius:16px;padding:24px 16px;text-align:center;margin-bottom:16px;">'
-            f'<div style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:600;'
+            f'<div style="background:#1a1a2e;border-radius:16px;padding:clamp(14px,3vw,24px) 12px;text-align:center;margin-bottom:16px;">'
+            f'<div style="font-size:clamp(10px,2.5vw,12px);color:rgba(255,255,255,0.5);font-weight:600;'
             f'text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">{kpi["metric"]}</div>'
-            f'<div style="font-size:42px;font-weight:900;color:#FF6B6B;line-height:1.1;">{val_str}</div>'
-            f'<div style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:6px;">{detail}</div>'
+            f'<div style="font-size:clamp(28px,7vw,42px);font-weight:900;color:#FF6B6B;line-height:1.1;">{val_str}</div>'
+            f'<div style="font-size:clamp(9px,2vw,11px);color:rgba(255,255,255,0.4);margin-top:6px;">{detail}</div>'
             f'</div>',
             unsafe_allow_html=True,
         )
@@ -278,8 +291,9 @@ def render_absorption_tab(data, lang):
                 font={"color": COLOR_TEXT},
                 legend={"orientation": "h", "yanchor": "bottom", "y": 1.02},
                 height=max(250, len(mdf) * 70 + 100),
-                margin={"l": 380, "r": 40, "t": 40, "b": 40},
+                margin={"l": 20, "r": 16, "t": 40, "b": 40},
                 xaxis_title=t("axis_improvement", lang),
+                yaxis={"tickfont": {"size": 10}},
             )
             st.plotly_chart(fig, use_container_width=True)
 
@@ -377,7 +391,7 @@ def main():
         page_title="Cupping Patch Dashboard",
         page_icon="🔬",
         layout="wide",
-        initial_sidebar_state="expanded",
+        initial_sidebar_state="collapsed",
     )
 
     render_custom_css()
@@ -406,6 +420,7 @@ def main():
         ("sec-absorption", t("tab_absorption", lang)),
         ("sec-safety", t("tab_safety", lang)),
         ("sec-sources", t("sec6_title", lang).split(". ", 1)[-1] if ". " in t("sec6_title", lang) else "Sources"),
+        ("sec-advisor", t("tab_advisor", lang)),
     ]
     # components.html()로 렌더링해야 onclick이 동작함 (st.markdown은 JS 차단)
     btns_html = ""
@@ -424,6 +439,11 @@ def main():
         font-size: 14px; font-weight: 600; text-decoration: none;
         color: #495057; background: #fff; border: 1px solid #dee2e6;
         cursor: pointer; transition: all 0.15s;
+        white-space: nowrap;
+    }}
+    @media (max-width: 768px) {{
+        .nav-btn {{ padding: 6px 12px; font-size: 12px; }}
+        .nav-bar {{ gap: 4px; }}
     }}
     .nav-btn:hover {{ background: #FF6B6B; color: #fff; border-color: #FF6B6B; }}
     </style>
@@ -460,6 +480,17 @@ def main():
 
     st.markdown('<div id="sec-sources" class="section-anchor"></div>', unsafe_allow_html=True)
     render_data_sources(data, lang)
+
+    st.markdown('<div id="sec-advisor" class="section-anchor"></div>', unsafe_allow_html=True)
+    render_advisor_tab(data, lang)
+
+    # 푸터 — 만든 사람
+    st.markdown(
+        '<div style="text-align:center;padding:32px 0 16px;color:#adb5bd;font-size:12px;">'
+        'Made by 안재환 · <a href="mailto:jhahn@mimetics.co.kr" style="color:#adb5bd;">jhahn@mimetics.co.kr</a>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
 
 
 if __name__ == "__main__":

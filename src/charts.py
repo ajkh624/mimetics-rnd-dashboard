@@ -2,8 +2,28 @@
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
+import streamlit as st
 
 from i18n import t, t_metric, t_product
+
+
+def _is_mobile():
+    """Streamlit 뷰포트가 모바일 수준(< 768px)인지 감지."""
+    try:
+        ctx = st.context
+        if hasattr(ctx, "headers"):
+            ua = ctx.headers.get("User-Agent", "")
+            return any(k in ua.lower() for k in ("mobile", "android", "iphone"))
+    except Exception:
+        pass
+    return False
+
+
+def _responsive_margin(desktop_left=280):
+    """모바일이면 좌측 마진을 축소한다."""
+    if _is_mobile():
+        return {"l": 20, "r": 16, "t": 40, "b": 40}
+    return {"l": desktop_left, "r": 40, "t": 40, "b": 40}
 
 COLOR_TEST = "#e74c3c"
 COLOR_CONTROL = "#2ecc71"
@@ -126,13 +146,15 @@ def create_heatmap(parsed_data, lang="ko"):
         colorbar={"title": colorbar_title},
     ))
 
+    mobile = _is_mobile()
     fig.update_layout(
         plot_bgcolor=COLOR_BG,
         paper_bgcolor=COLOR_BG,
-        font={"color": COLOR_TEXT, "family": "Noto Sans KR, sans-serif"},
+        font={"color": COLOR_TEXT, "family": "Noto Sans KR, sans-serif",
+              "size": 10 if mobile else 12},
         height=max(300, len(pivot.index) * 50 + 100),
-        margin={"l": 280, "r": 40, "t": 40, "b": 60},
-        xaxis={"side": "bottom"},
+        margin=_responsive_margin(280),
+        xaxis={"side": "bottom", "tickangle": -45 if mobile else 0},
         yaxis={"autorange": "reversed"},
     )
 
@@ -198,7 +220,7 @@ def create_comparison_bar_by_metric(parsed_data, metric_name, lang="ko"):
         font={"color": COLOR_TEXT, "family": "Noto Sans KR, sans-serif"},
         legend={"orientation": "h", "yanchor": "bottom", "y": 1.02},
         height=max(300, len(df) * 60 + 100),
-        margin={"l": 300, "r": 40, "t": 60, "b": 40},
+        margin=_responsive_margin(300),
         xaxis_title=t("axis_improvement", lang),
     )
 
@@ -259,7 +281,7 @@ def create_overview_comparative_chart(parsed_data, lang="ko"):
         font={"color": COLOR_TEXT, "family": "Noto Sans KR, sans-serif"},
         legend={"orientation": "h", "yanchor": "bottom", "y": 1.02},
         height=max(350, len(summary) * 40 + 100),
-        margin={"l": 160, "r": 80, "t": 60, "b": 40},
+        margin=_responsive_margin(160),
         xaxis_title=t("chart_comparative_axis", lang),
         showlegend=True,
     )

@@ -461,6 +461,45 @@ TRANSLATIONS = {
         "ja": "📖 安全性指標の説明",
     },
 
+    # ── AI 어드바이저 ──
+    "tab_advisor": {
+        "ko": "🤖 AI 어드바이저",
+        "en": "🤖 AI Advisor",
+        "ja": "🤖 AIアドバイザー",
+    },
+    "advisor_title": {
+        "ko": "7. AI 임상데이터 어드바이저",
+        "en": "7. AI Clinical Data Advisor",
+        "ja": "7. AI臨床データアドバイザー",
+    },
+    "advisor_intro": {
+        "ko": """
+        <strong>AI 어드바이저</strong>에게 임상시험 결과에 대해 자유롭게 질문하세요.<br>
+        14개 보고서의 전체 데이터를 학습한 GPT-5.4가 인사이트, 통계 해석, 실험 방법론, 제품 비교 등을 답변합니다.<br>
+        <em>예시: "탄력 개선 효과가 가장 큰 제품은?", "p-value가 의미하는 바는?", "흡수도 시험의 측정 방법을 설명해줘"</em>
+        """,
+        "en": """
+        Ask the <strong>AI Advisor</strong> anything about the clinical trial results.<br>
+        GPT-5.4, trained on all 14 report datasets, provides insights, statistical interpretation, methodology explanations, and product comparisons.<br>
+        <em>Examples: "Which product showed the best elasticity improvement?", "What does the p-value mean?", "Explain the absorption test methodology"</em>
+        """,
+        "ja": """
+        <strong>AIアドバイザー</strong>に臨床試験結果について自由に質問してください。<br>
+        14件の報告書全データを学習したGPT-5.4がインサイト、統計解釈、実験方法論、製品比較などに回答します。<br>
+        <em>例: 「弾力改善効果が最も大きい製品は？」「p値の意味は？」「吸収度試験の測定方法を説明して」</em>
+        """,
+    },
+    "advisor_no_key": {
+        "ko": "⚠️ OpenAI API 키가 설정되지 않았습니다. .streamlit/secrets.toml에 OPENAI_API_KEY를 추가해주세요.",
+        "en": "⚠️ OpenAI API key not configured. Please add OPENAI_API_KEY to .streamlit/secrets.toml.",
+        "ja": "⚠️ OpenAI APIキーが設定されていません。.streamlit/secrets.tomlにOPENAI_API_KEYを追加してください。",
+    },
+    "advisor_placeholder": {
+        "ko": "임상 결과에 대해 질문하세요...",
+        "en": "Ask about clinical trial results...",
+        "ja": "臨床試験結果について質問してください...",
+    },
+
     # ── 차트 범례 / 축 ──
     "legend_test": {
         "ko": "시험군(제품+패치)",
