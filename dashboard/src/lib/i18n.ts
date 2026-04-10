@@ -89,6 +89,11 @@ const T: Record<string, Record<Lang, string>> = {
   tab_advisor: { ko: "AI 어드바이저", en: "AI Advisor", ja: "AIアドバイザー" },
   nav_heatmap: { ko: "히트맵", en: "Heatmap", ja: "ヒートマップ" },
   pilot_label: { ko: "[예비]", en: "[Pilot]", ja: "[予備]" },
+  kpi_range_note: {
+    ko: "※ 범위(예: +84~211%)는 여러 제품의 대조군 대비 개선율 분포입니다. 단일 제품만 측정된 지표는 범위 없이 하나의 값으로 표시됩니다.",
+    en: "※ Ranges (e.g. +84~211%) show the distribution of comparative improvement across multiple products. Metrics measured in only one product show a single value without a range.",
+    ja: "※ 範囲（例: +84~211%）は複数製品の対照群比改善率の分布です。1製品のみで測定された指標は範囲なしの単一値で表示されます。",
+  },
 
   // ── AI 어드바이저 ──
   advisor_title: {

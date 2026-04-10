@@ -83,7 +83,7 @@ export default function HeroSection({ data, lang }: { data: Report[]; lang: Lang
       </div>
 
       {/* Sub KPI cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
         {subItems.map((kpi) => {
           const rangeStr = kpi.min === kpi.max
             ? `+${kpi.min.toFixed(0)}%`
@@ -104,6 +104,9 @@ export default function HeroSection({ data, lang }: { data: Report[]; lang: Lang
           );
         })}
       </div>
+      <p className="text-[11px] text-gray-400 mb-6 text-center">
+        {t("kpi_range_note", lang)}
+      </p>
     </>
   );
 }
