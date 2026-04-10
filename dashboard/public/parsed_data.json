@@ -10,74 +10,51 @@
     "metrics": [
       {
         "metric": "흡수량",
-        "table_title": "피부 흡수량, 피부 흡수 깊이, 피부 흡수 속도 평가 결과",
+        "table_title": "피부 흡수량 평가 결과",
         "test_values": [
-          {
-            "mean": 104818.43,
-            "sd": 1069.82
-          },
-          {
-            "mean": 104818.43,
-            "sd": 1069.82
-          },
-          {
-            "mean": 410370.33,
-            "sd": 15032.15
-          },
-          {
-            "mean": 325936.72,
-            "sd": 23762.5
-          },
-          {
-            "mean": 13.83,
-            "sd": 2.75
-          },
-          {
-            "mean": 13.83,
-            "sd": 2.75
-          }
+          { "mean": 104818.43, "sd": 1069.82 },
+          { "mean": 410370.33, "sd": 15032.15 }
         ],
         "control_values": [
-          {
-            "mean": 34.0,
-            "sd": 13.43
-          },
-          {
-            "mean": 14.67,
-            "sd": 3.75
-          },
-          {
-            "mean": 27.67,
-            "sd": 5.51
-          },
-          {
-            "mean": 27.67,
-            "sd": 5.51
-          },
-          {
-            "mean": 68.0,
-            "sd": 26.85
-          },
-          {
-            "mean": 29.33,
-            "sd": 7.51
-          }
+          { "mean": 104818.43, "sd": 1069.82 },
+          { "mean": 325936.72, "sd": 23762.50 }
         ],
-        "test_improvement": [
-          291.51
+        "test_improvement": [291.51],
+        "control_improvement": [210.95],
+        "comparative_improvement": [38.18],
+        "between_group_p": []
+      },
+      {
+        "metric": "흡수 깊이",
+        "table_title": "피부 흡수 깊이 평가 결과",
+        "test_values": [
+          { "mean": 13.83, "sd": 2.75 },
+          { "mean": 34.00, "sd": 13.43 }
         ],
-        "control_improvement": [
-          210.95
+        "control_values": [
+          { "mean": 13.83, "sd": 2.75 },
+          { "mean": 14.67, "sd": 3.75 }
         ],
-        "comparative_improvement": [
-          38.18,
-          145.78,
-          6.02,
-          2320.0,
-          145.78,
-          6.02,
-          2320.0
-        ]
+        "test_improvement": [145.78],
+        "control_improvement": [6.02],
+        "comparative_improvement": [2320.00],
+        "between_group_p": []
+      },
+      {
+        "metric": "흡수 속도",
+        "table_title": "피부 흡수 속도 평가 결과",
+        "test_values": [
+          { "mean": 27.67, "sd": 5.51 },
+          { "mean": 68.00, "sd": 26.85 }
+        ],
+        "control_values": [
+          { "mean": 27.67, "sd": 5.51 },
+          { "mean": 29.33, "sd": 7.51 }
+        ],
+        "test_improvement": [145.78],
+        "control_improvement": [6.02],
+        "comparative_improvement": [2320.00],
+        "between_group_p": []
       }
     ]
   },
