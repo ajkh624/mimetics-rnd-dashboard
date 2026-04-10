@@ -7,9 +7,9 @@ const T: Record<string, Record<Lang, string>> = {
     ja: "ヒューマン皮膚臨床センター 陰圧パッチ臨床結果",
   },
   hero_subtitle: {
-    ko: "14개 임상시험 PDF 데이터 기반 — 패치 부가효과 지표별/제품별 비교",
-    en: "Based on 14 clinical trial PDF reports — Patch add-on efficacy by metric & product",
-    ja: "14件の臨床試験PDFデータに基づく — パッチ付加効果を指標別・製品別に比較",
+    ko: "18개 임상시험 PDF 데이터 기반 — 패치 부가효과 지표별/제품별 비교",
+    en: "Based on 18 clinical trial PDF reports — Patch add-on efficacy by metric & product",
+    ja: "18件の臨床試験PDFデータに基づく — パッチ付加効果を指標別・製品別に比較",
   },
   kpi_products: {
     ko: "{count}개 제품 평균 +{avg}%",
@@ -86,8 +86,41 @@ const T: Record<string, Record<Lang, string>> = {
   tab_absorption: { ko: "흡수도", en: "Absorption", ja: "吸収度" },
   tab_safety: { ko: "안전성", en: "Safety", ja: "安全性" },
   tab_sources: { ko: "데이터 출처", en: "Data Sources", ja: "データ出典" },
+  tab_advisor: { ko: "AI 어드바이저", en: "AI Advisor", ja: "AIアドバイザー" },
   nav_heatmap: { ko: "히트맵", en: "Heatmap", ja: "ヒートマップ" },
   pilot_label: { ko: "[예비]", en: "[Pilot]", ja: "[予備]" },
+
+  // ── AI 어드바이저 ──
+  advisor_title: {
+    ko: "7. AI 임상데이터 어드바이저",
+    en: "7. AI Clinical Data Advisor",
+    ja: "7. AI臨床データアドバイザー",
+  },
+  advisor_intro: {
+    ko: "18개 임상시험 데이터를 학습한 AI가 궁금한 점에 답변합니다. 예: <strong>\"탄력 개선에 가장 효과적인 제품은?\"</strong>, <strong>\"보습 지표의 p-value 의미를 설명해줘\"</strong>, <strong>\"음압패치의 작용 원리는?\"</strong>",
+    en: "AI trained on 18 clinical trial datasets answers your questions. Try: <strong>\"Which product is most effective for elasticity?\"</strong>, <strong>\"Explain the p-value for moisturizing\"</strong>, <strong>\"How does the cupping patch work?\"</strong>",
+    ja: "18件の臨床試験データを学習したAIがご質問にお答えします。例: <strong>「弾力改善に最も効果的な製品は？」</strong>、<strong>「保湿指標のp値の意味を説明して」</strong>、<strong>「陰圧パッチの作用原理は？」</strong>",
+  },
+  advisor_no_key: {
+    ko: "API 키가 설정되지 않았습니다. 관리자에게 문의하세요.",
+    en: "API key is not configured. Please contact the administrator.",
+    ja: "APIキーが設定されていません。管理者にお問い合わせください。",
+  },
+  advisor_placeholder: {
+    ko: "임상 결과에 대해 질문하세요...",
+    en: "Ask about clinical trial results...",
+    ja: "臨床試験結果について質問してください...",
+  },
+  advisor_error: {
+    ko: "응답 생성 중 오류가 발생했습니다. 다시 시도해주세요.",
+    en: "An error occurred while generating the response. Please try again.",
+    ja: "回答生成中にエラーが発生しました。もう一度お試しください。",
+  },
+  advisor_thinking: {
+    ko: "답변 생성 중...",
+    en: "Generating response...",
+    ja: "回答生成中...",
+  },
 
   // ── 섹션별 인사이트 ──
   insight_kpi: {
@@ -123,9 +156,9 @@ const T: Record<string, Record<Lang, string>> = {
     ja: "ダッシュボード使用ガイド",
   },
   guide_overview: {
-    ko: "이 대시보드는 14개 임상시험 보고서(휴먼테스트 수행)에서 추출한 데이터를 시각화합니다. 음압패치를 함께 사용했을 때의 부가효과를 지표별·제품별로 비교할 수 있습니다.",
-    en: "This dashboard visualizes data extracted from 14 clinical trial reports. Compare the add-on effects of the cupping patch by metric and product.",
-    ja: "このダッシュボードは14件の臨床試験報告書から抽出したデータを視覚化します。指標別・製品別にパッチの付加効果を比較できます。",
+    ko: "이 대시보드는 18개 임상시험 보고서(휴먼테스트 수행)에서 추출한 데이터를 시각화합니다. 음압패치를 함께 사용했을 때의 부가효과를 지표별·제품별로 비교할 수 있습니다.",
+    en: "This dashboard visualizes data extracted from 18 clinical trial reports. Compare the add-on effects of the cupping patch by metric and product.",
+    ja: "このダッシュボードは18件の臨床試験報告書から抽出したデータを視覚化します。指標別・製品別にパッチの付加効果を比較できます。",
   },
   guide_how_title: {
     ko: "사용 방법",
@@ -216,6 +249,7 @@ const METRIC_NAMES: Record<string, Record<string, string>> = {
   "흡수량": { en: "Absorption Amount", ja: "吸収量" },
   "흡수 깊이": { en: "Absorption Depth", ja: "吸収深さ" },
   "흡수 속도": { en: "Absorption Speed", ja: "吸収速度" },
+  "경피수분손실량": { en: "TEWL", ja: "経皮水分蒸散量" },
 };
 
 const PRODUCT_NAMES: Record<string, Record<string, string>> = {
@@ -232,6 +266,10 @@ const PRODUCT_NAMES: Record<string, Record<string, string>> = {
   "문어 흡반 구조 모사 피부 패치": { en: "Octopus Sucker Skin Patch", ja: "タコ吸盤構造模倣パッチ" },
   "Stem Science Eye+음압패치": { en: "Stem Science Eye+Cupping Patch", ja: "Stem Science Eye+陰圧パッチ" },
   "Clini Science Eye+음압패치": { en: "Clini Science Eye+Cupping Patch", ja: "Clini Science Eye+陰圧パッチ" },
+  "임상시험용 앰플": { en: "Clinical Trial Ampoule", ja: "臨床試験用アンプル" },
+  "겔(화장품 조성물)": { en: "Gel (Cosmetic Composition)", ja: "ゲル（化粧品組成物）" },
+  "미션 크리스탈 젤리 아이&페이스+음압패치": { en: "Mission Crystal Jelly Eye&Face+Cupping Patch", ja: "ミッションクリスタルジェリーアイ&フェイス+陰圧パッチ" },
+  "미션 크리스탈 젤리 아이&페이스": { en: "Mission Crystal Jelly Eye&Face", ja: "ミッションクリスタルジェリーアイ&フェイス" },
 };
 
 const SAFETY_MAP: Record<string, Record<string, string>> = {

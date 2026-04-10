@@ -10,6 +10,7 @@ import SafetySection from "./SafetySection";
 import DataSourcesSection from "./DataSourcesSection";
 import Sidebar from "./Sidebar";
 import InsightBox from "./InsightBox";
+import AdvisorSection from "./AdvisorSection";
 
 const LANG_OPTIONS: { label: string; value: Lang }[] = [
   { label: "한국어", value: "ko" },
@@ -23,6 +24,7 @@ const NAV_ITEMS: { id: string; labelKey: string; icon: string }[] = [
   { id: "sec-absorption", labelKey: "tab_absorption", icon: "💧" },
   { id: "sec-safety", labelKey: "tab_safety", icon: "🛡️" },
   { id: "sec-sources", labelKey: "tab_sources", icon: "📋" },
+  { id: "sec-advisor", labelKey: "tab_advisor", icon: "🤖" },
 ];
 
 export default function Dashboard({ data }: { data: Report[] }) {
@@ -89,12 +91,15 @@ export default function Dashboard({ data }: { data: Report[] }) {
 
           <div className="my-8" />
           <DataSourcesSection data={data} lang={lang} />
+
+          <div className="my-8" />
+          <AdvisorSection lang={lang} />
         </main>
       </div>
 
       {/* Footer */}
       <div className="mt-12 py-6 border-t border-gray-200 text-center text-xs text-gray-400">
-        &copy; 2025 Mimetics Inc. | {lang === "ko" ? "14개 임상시험 보고서 기반 자동 파싱 데이터" : "Auto-parsed from 14 clinical trial reports"}
+        &copy; 2025 Mimetics Inc. | {lang === "ko" ? "18개 임상시험 보고서 기반 자동 파싱 데이터" : "Auto-parsed from 18 clinical trial reports"}
       </div>
     </div>
   );

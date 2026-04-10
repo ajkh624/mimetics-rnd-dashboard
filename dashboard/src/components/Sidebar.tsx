@@ -54,6 +54,22 @@ export default function Sidebar({ lang }: { lang: Lang }) {
       {/* Desktop sidebar */}
       <aside className="w-72 shrink-0 hidden lg:block">
         <div className="sticky top-16 space-y-5">
+          <a
+            href="https://drive.google.com/drive/u/0/folders/1mQpygZQQZyet2IElyXpFqPrgpt9IMF5V"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl p-4 transition-colors group"
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">📂</span>
+              <div>
+                <div className="text-sm font-bold text-blue-700 group-hover:text-blue-900">
+                  {lang === "ko" ? "임상결과 원본 보기" : lang === "ja" ? "臨床結果の原本を見る" : "View Original Reports"}
+                </div>
+                <div className="text-[11px] text-blue-500">Google Drive ↗</div>
+              </div>
+            </div>
+          </a>
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5">
             <GuideContent lang={lang} />
           </div>

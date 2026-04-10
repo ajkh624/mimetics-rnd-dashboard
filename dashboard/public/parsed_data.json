@@ -1900,5 +1900,163 @@
       "irritation_index": 0.17,
       "result": "비자극성"
     }
+  },
+  {
+    "report_code": "HM-R25-0934",
+    "type": "efficacy",
+    "product": "임상시험용 앰플",
+    "duration": "2주",
+    "subjects": 23,
+    "title": "피부 눈가 주름 개선, 피부 탄력 개선, 피부 보습 개선",
+    "body_part": "눈가/뺨",
+    "metrics": [
+      {
+        "metric": "주름(눈가)",
+        "table_title": "주름 평균 깊이 평가 결과",
+        "test_values": [
+          { "mean": 0.0856, "sd": 0.0154 },
+          { "mean": 0.0798, "sd": 0.0151 }
+        ],
+        "control_values": [
+          { "mean": 0.0901, "sd": 0.0151 },
+          { "mean": 0.0865, "sd": 0.0149 }
+        ],
+        "test_improvement": [6.83],
+        "control_improvement": [4.00],
+        "comparative_improvement": [70.64],
+        "between_group_p": ["<0.001"]
+      },
+      {
+        "metric": "탄력",
+        "table_title": "R2 평가 결과",
+        "test_values": [
+          { "mean": 0.6321, "sd": 0.0655 },
+          { "mean": 0.6720, "sd": 0.0662 }
+        ],
+        "control_values": [
+          { "mean": 0.6367, "sd": 0.0614 },
+          { "mean": 0.6541, "sd": 0.0636 }
+        ],
+        "test_improvement": [6.30],
+        "control_improvement": [2.74],
+        "comparative_improvement": [130.27],
+        "between_group_p": ["<0.001"]
+      },
+      {
+        "metric": "보습",
+        "table_title": "평균 유전율 평가 결과",
+        "test_values": [
+          { "mean": 25.67, "sd": 4.33 },
+          { "mean": 35.41, "sd": 4.46 }
+        ],
+        "control_values": [
+          { "mean": 25.71, "sd": 4.37 },
+          { "mean": 32.87, "sd": 5.08 }
+        ],
+        "test_improvement": [37.98],
+        "control_improvement": [27.83],
+        "comparative_improvement": [36.46],
+        "between_group_p": ["<0.001"]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-R25-0975",
+    "type": "efficacy",
+    "product": "겔(화장품 조성물)",
+    "duration": "2주",
+    "subjects": 23,
+    "title": "경피수분손실량 개선",
+    "body_part": "전박",
+    "metrics": [
+      {
+        "metric": "경피수분손실량",
+        "table_title": "경피수분손실량 평가 결과",
+        "test_values": [
+          { "mean": 6.51, "sd": 1.44 },
+          { "mean": 5.66, "sd": 1.12 }
+        ],
+        "control_values": [
+          { "mean": 6.49, "sd": 1.32 },
+          { "mean": 6.03, "sd": 1.09 }
+        ],
+        "test_improvement": [13.06],
+        "control_improvement": [6.99],
+        "comparative_improvement": [86.75],
+        "between_group_p": ["<0.001"]
+      }
+    ]
+  },
+  {
+    "report_code": "HM-R25-0996",
+    "type": "safety",
+    "product": "미션 크리스탈 젤리 아이&페이스+음압패치",
+    "duration": "2주",
+    "subjects": 22,
+    "title": "2주 사용 후 피부 이상반응 평가",
+    "metrics": [],
+    "irritation_index": 0,
+    "result": "이상반응 없음",
+    "safety_data": {
+      "product": "미션 크리스탈 젤리 아이&페이스+음압패치",
+      "title": "피부 이상반응 평가",
+      "irritation_index": 0,
+      "result": "이상반응 없음"
+    }
+  },
+  {
+    "report_code": "PNK-25D03-RS1R",
+    "type": "absorption",
+    "product": "미션 크리스탈 젤리 아이&페이스",
+    "duration": "1회(30분)",
+    "subjects": 20,
+    "title": "화장품 단독 사용 대비 음압 패치 병행 사용 흡수도",
+    "body_part": "전박",
+    "metrics": [
+      {
+        "metric": "흡수량",
+        "table_title": "피부 흡수도 측정결과",
+        "test_values": [
+          { "mean": 1.000, "sd": 0.000 },
+          { "mean": 5.200, "sd": 0.894 }
+        ],
+        "control_values": [
+          { "mean": 1.050, "sd": 3.100 },
+          { "mean": 0.224, "sd": 0.641 }
+        ],
+        "test_improvement": [420.00],
+        "control_improvement": [195.24],
+        "comparative_improvement": [115.12],
+        "between_group_p": ["<0.001"]
+      },
+      {
+        "metric": "흡수 속도",
+        "table_title": "흡수속도 측정결과",
+        "test_values": [
+          { "mean": 42.000, "sd": 8.944 }
+        ],
+        "control_values": [
+          { "mean": 20.500, "sd": 6.863 }
+        ],
+        "test_improvement": [],
+        "control_improvement": [],
+        "comparative_improvement": [104.88],
+        "between_group_p": ["<0.001"]
+      },
+      {
+        "metric": "흡수 깊이",
+        "table_title": "흡수깊이 측정결과",
+        "test_values": [
+          { "mean": 21.000, "sd": 4.472 }
+        ],
+        "control_values": [
+          { "mean": 10.250, "sd": 3.432 }
+        ],
+        "test_improvement": [],
+        "control_improvement": [],
+        "comparative_improvement": [104.88],
+        "between_group_p": ["<0.001"]
+      }
+    ]
   }
 ]
