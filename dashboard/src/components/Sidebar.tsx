@@ -70,6 +70,22 @@ export default function Sidebar({ lang }: { lang: Lang }) {
               </div>
             </div>
           </a>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1QxXFnTcUTT4Sjy1VURLxWQETSDJau82_7EGzDhgIzSs/edit?gid=0#gid=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-green-50 hover:bg-green-100 border border-green-200 rounded-xl p-4 transition-colors group"
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">📊</span>
+              <div>
+                <div className="text-sm font-bold text-green-700 group-hover:text-green-900">
+                  {lang === "ko" ? "임상시험 관리 시트" : lang === "ja" ? "臨床試験管理シート" : "Trial Management Sheet"}
+                </div>
+                <div className="text-[11px] text-green-500">Google Sheets ↗</div>
+              </div>
+            </div>
+          </a>
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5">
             <GuideContent lang={lang} />
           </div>

@@ -2021,12 +2021,12 @@
           { "mean": 5.200, "sd": 0.894 }
         ],
         "control_values": [
-          { "mean": 1.050, "sd": 3.100 },
-          { "mean": 0.224, "sd": 0.641 }
+          { "mean": 1.050, "sd": 0.224 },
+          { "mean": 3.100, "sd": 0.641 }
         ],
         "test_improvement": [420.00],
         "control_improvement": [195.24],
-        "comparative_improvement": [115.12],
+        "comparative_improvement": [115.10],
         "between_group_p": ["<0.001"]
       },
       {

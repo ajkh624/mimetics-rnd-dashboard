@@ -245,7 +245,7 @@ export default function DataSourcesSection({ data, lang }: { data: Report[]; lan
             </tbody>
           </table>
         </div>
-        <div className="mt-4 text-sm">
+        <div className="mt-4 flex flex-wrap gap-4 text-sm">
           <a
             href="https://drive.google.com/drive/u/0/folders/1mQpygZQQZyet2IElyXpFqPrgpt9IMF5V"
             target="_blank"
@@ -254,6 +254,16 @@ export default function DataSourcesSection({ data, lang }: { data: Report[]; lan
           >
             <span>📂</span>
             {lang === "ko" ? "임상결과 드라이브 폴더" : lang === "ja" ? "臨床結果ドライブフォルダ" : "Clinical Results Drive Folder"}
+            <span className="text-xs text-gray-400">↗</span>
+          </a>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1QxXFnTcUTT4Sjy1VURLxWQETSDJau82_7EGzDhgIzSs/edit?gid=0#gid=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-green-600 hover:text-green-800 font-medium hover:underline"
+          >
+            <span>📊</span>
+            {lang === "ko" ? "임상시험 관리 시트" : lang === "ja" ? "臨床試験管理シート" : "Trial Management Sheet"}
             <span className="text-xs text-gray-400">↗</span>
           </a>
         </div>
