@@ -23,11 +23,24 @@ export default function SafetySection({ data, lang }: { data: Report[]; lang: La
       <h2 className="section-title">{t("sec5_title", lang)}</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-        {cards.map((card) => (
-          <div key={card.label} className="bg-green-50 rounded-xl p-5 text-center border border-green-200">
-            <div className="text-xs text-gray-600 font-semibold mb-1">{card.label}</div>
-            <div className="text-2xl font-extrabold text-green-600">{card.value}</div>
-            <div className="text-[11px] text-gray-500 mt-1">{card.detail}</div>
+        {cards.map((card, i) => (
+          <div
+            key={card.label}
+            className={`rounded-[18px] p-5 text-center ${
+              i === 0
+                ? "bento-card-dark text-white"
+                : "bento-card border border-green-100"
+            }`}
+          >
+            <div className={`text-xs font-semibold mb-2 ${i === 0 ? "text-white/60" : "text-gray-500"}`}>
+              {card.label}
+            </div>
+            <div className={`text-2xl font-extrabold ${i === 0 ? "text-green-400" : "text-green-600"}`}>
+              {card.value}
+            </div>
+            <div className={`text-[11px] mt-1 ${i === 0 ? "text-white/40" : "text-gray-500"}`}>
+              {card.detail}
+            </div>
           </div>
         ))}
       </div>

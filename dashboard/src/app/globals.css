@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f6f8;
+  --background: #dcdcdc;
   --foreground: #1a1a2e;
+  --card-bg: #ffffff;
+  --card-dark: #0f0e17;
+  --card-navy: #1a1a2e;
+  --accent: #ff6b6b;
+  --gap: 12px;
 }
 
 body {
@@ -11,11 +16,34 @@ body {
   font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;
 }
 
+/* 벤토 카드 기본 스타일 */
+.bento-card {
+  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.bento-card-dark {
+  border-radius: 20px;
+  background: var(--card-dark);
+}
+
+.bento-card-navy {
+  border-radius: 20px;
+  background: var(--card-navy);
+}
+
+.bento-card-accent {
+  border-radius: 20px;
+  background: var(--accent);
+}
+
 .section-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   color: #1a1a2e;
-  margin: 32px 0 12px;
+  margin: 28px 0 10px;
   padding-left: 12px;
   border-left: 4px solid #ff6b6b;
 }
